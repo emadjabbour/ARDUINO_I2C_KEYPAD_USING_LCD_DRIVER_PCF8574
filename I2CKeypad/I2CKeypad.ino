@@ -1,4 +1,13 @@
+/*
+THIS CODE WAS WRITTEN BY EMAD JABBOUR 4/26/2020
+THE CONNECTRIONS ARE
+THE 
+FROM LEFT TO WRITE ON THE KEYPAD
+AND FROM RIGHT TO LEFT ON THE DRIVER FROM THE I2C CONNECTION PINS TOWERD THE LED PINS
+KEYPAD     :1  2  3  4   5   6   7
+LCD DRIVER :4  5  6  11  12  13  14
 
+*/
 #include "getK.h"
 
 void setup()
@@ -8,9 +17,9 @@ void setup()
 
 void loop()
 {
-  char i = getK();
-if(i != 'N'){
-Serial.println(i);
+  char i = getK();     //PUT THE RETURN VALUE FROM THE getK() INTO VARIABLE
+if(i != 'N'){          // WE DONT WANT THE NULL VALUE TO BE SEEN IF A KEY GOT PRESSED
+Serial.println(i);     
 }
-delay(500);
+delay(500);            //DELAY TO SEPARATE THE READING VALUES 
 }
